@@ -8,7 +8,7 @@ const ids=new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
 const missing=[...html.matchAll(/href="#([^"]+)"/g)].map(m=>m[1]).filter(id=>!ids.has(id));
 assert.deepEqual([...new Set(missing)], [], 'Broken internal links');
 assert.ok(!/\[\[(?:ref|xref|tref):/.test(html), 'Unresolved Spec-Up-T reference');
-for(const title of ['Cryptographic Background','SIROS reading and review pack','Attribution and maintenance']) assert.ok(html.includes(title), `Missing ${title}`);
+for(const title of ['Reading this guide','Construction walkthroughs','Reading the evidence','Cryptographic Background','Attribution and maintenance']) assert.ok(html.includes(title), `Missing ${title}`);
 const map=JSON.parse(readFileSync('source-map.json'));
 assert.match(map.sourceRevision,/^[a-f0-9]{40}$/);
 for(const item of map.files) assert.ok(existsSync(item.destination.replace(/^guide\//,'')));

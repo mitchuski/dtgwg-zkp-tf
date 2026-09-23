@@ -1,6 +1,6 @@
 ## Trust-Graph Operations and the First Proof
 
-This section is informative. It describes the integration target and open design decisions; it does not define an adopted wire protocol.
+This section is informative. It describes how proofs fit into a trust graph's life cycle; it does not define a wire protocol.
 
 ### From a relationship to a verifiable decision
 
@@ -23,7 +23,7 @@ The **presenter** is the party submitting the proof. The **voucher** is the coun
 
 Construction 010 asks whether the presenter can present evidence of a relationship with the voucher inside community C while the voucher is offline. Its witness inventory includes authenticated membership evidence for both parties, the relationship credential, the required holder/linkage material and accepted status evidence.
 
-The difficult step is connecting the voucher’s relationship-signing identifier to the voucher’s community membership. A membership path alone does not establish that connection. Depending on the credential profile and intended disclosure, a shared directed identifier with authenticated bindings or an issuance-time linkage artifact may supply it. the presenter cannot derive the voucher’s control from the presenter’s own secret. The representation and security of that artifact remain a construction-selection question.
+The difficult step is connecting the voucher’s relationship-signing identifier to the voucher’s community membership. A membership path alone does not establish that connection. Depending on the credential profile and intended disclosure, a shared directed identifier with authenticated bindings or an issuance-time linkage artifact may supply it. The presenter cannot derive the voucher’s control from the presenter’s own secret. The representation and security of that artifact remain a construction-selection question.
 
 The first technical milestone is a credential-bound private-membership presentation supporting this larger use case. It combines membership, holder binding, transcript binding and accepted validity/revocation state, together with credential authenticity. This is a subset of ADR-001, not evidence that all of construction 010 has been implemented.
 
@@ -31,10 +31,8 @@ The evidence-repository membership/nullifier/transcript circuit and canonical fi
 
 ### Admission: vouches or hidden vetting
 
-Admission is a different act from ADR-001. The applicant is not yet a member, and the verifier is the community that will issue the membership. Two admission statements are recorded. Construction 023 proves k vouches over relationship credentials that current members issued. Construction 024 proves k attestations from distinct eligible vetters, where no vetter's DID reaches the community. They need different issuance: 023 needs members to have issued relationship credentials to the applicant, while 024 needs a published commitment to the eligible-vetter set. A community whose admission path mints no relationship credentials can run 024 but not 023. In both, the proof's outcome is one input to the community's policy engine, and issuing the membership grant remains a separate act (WG-04).
+Admission is a different act from ADR-001. The applicant is not yet a member, and the verifier is the community that will issue the membership. Two admission statements are recorded. Construction 023 proves k vouches over relationship credentials that current members issued. Construction 024 proves k attestations from distinct eligible vetters, where no vetter's DID reaches the community. They need different issuance: 023 needs members to have issued relationship credentials to the applicant, while 024 needs a published commitment to the eligible-vetter set. A community whose admission path mints no relationship credentials can run 024 but not 023. In both, the proof's outcome is one input to the community's policy engine, and issuing the membership grant remains a separate act. The [admission walkthroughs](#admission) compare them, with 013 for cross-community edges.
 
 ### Use-case traceability
 
-For each use case, maintain the actors, credential revision and format, statement, disclosure, witness custody, construction dependencies, implementation version, evidence and unresolved decisions. Link the original discussion comments as well as the containing thread. A comment can motivate a draft without becoming an adopted requirement.
-
-The near-term sequence is private membership eligibility, the complete community-anchored proof, pairwise relationship presentation, and a bounded delegation profile. This is an editorial implementation proposal for review, not an assignment or delivery commitment.
+For each use case, keep together the actors, credential revision and format, statement, disclosure, witness custody, construction dependencies, implementation version, evidence and open decisions, so a reader can follow a use case from its request to the record that answers it.

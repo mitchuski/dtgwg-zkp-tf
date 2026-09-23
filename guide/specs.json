@@ -3,7 +3,7 @@
     {
       "title": "DTG ZKP Implementation Guide",
       "description": "Informative implementation walkthrough, cryptographic background and reviewer reading paths for the DTG ZKP specification.",
-      "author": "Trust over IP Foundation \u2014 DTG Working Group, ZKP Task Force",
+      "author": "Trust over IP Foundation — DTG Working Group, ZKP Task Force",
       "spec_directory": "./spec",
       "spec_terms_directory": "terms-definitions",
       "output_path": "./docs",
@@ -12,10 +12,9 @@
         "intro.md",
         "implementation-guide.md",
         "trust-graph.md",
-        "research-and-book.md",
+        "constructions.md",
+        "evidence.md",
         "cryptographic-background.md",
-        "siros-review.md",
-        "editorial-worklist.md",
         "attribution.md"
       ],
       "logo": "https://raw.githubusercontent.com/trustoverip/spec-up-t/refs/heads/master/src/install-from-boilerplate/boilerplate/static/logo.svg",
@@ -44,7 +43,7 @@
         }
       ],
       "katex": false,
-      "anchor_symbol": "\u00a7"
+      "anchor_symbol": "§"
     }
   ]
 }
