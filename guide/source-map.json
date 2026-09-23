@@ -1,0 +1,34 @@
+{
+  "sourceRepository": "trustoverip/dtgwg-zkp-spec",
+  "sourceRevision": "315cf4466bfcfe3d70c88a6706d0a6ca633c60c9",
+  "meeting": "https://lf-toip.atlassian.net/wiki/spaces/HOME/pages/1181057055",
+  "status": "editorial extraction draft; no adoption or new evidence state",
+  "files": [
+    {
+      "source": "spec/implementation-guide.md",
+      "destination": "guide/spec/implementation-guide.md",
+      "sourceSha256": "2717a02b8fd3a746c57683d00cc506ffeb98479eed2a76ce6e178566a3b9711f"
+    },
+    {
+      "source": "spec/trust-graph.md",
+      "destination": "guide/spec/trust-graph.md",
+      "sourceSha256": "842268bb07731bdce1172615cb6319ab2ba561595c6b2f60c7a963e0ceafcf9b"
+    },
+    {
+      "source": "spec/research-and-book.md",
+      "destination": "guide/spec/research-and-book.md",
+      "sourceSha256": "1554484079e0ff847edeb550204981dba8d2268793899a54889b8d31223411dc"
+    },
+    {
+      "source": "spec/cryptographic-background.md",
+      "destination": "guide/spec/cryptographic-background.md",
+      "sourceSha256": "df272e129c32c0ddde34c85267bd75331c5c03e500466b1dbcd2c2a857b80348"
+    },
+    {
+      "source": "spec/appendix.md",
+      "destination": "guide/spec/editorial-worklist.md",
+      "selection": "Maintenance Note and V01–V12 tail, with an informative guide wrapper; WG decision notes retained in the core"
+    }
+  ],
+  "localRevisionNote": "The sourceRevision pins the original editorial extraction only. The 23 September hidden-vetting and Lean-coverage additions are local working-draft edits, not contained in that revision; their evidence must be pinned before publication."
+}
