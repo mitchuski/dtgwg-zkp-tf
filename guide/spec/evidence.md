@@ -33,7 +33,7 @@ Where a record carries one, the block names:
 
 A block does not claim every clause: several composed models cover some clauses and leave others to named hypotheses or to other records.
 
-The models also show which clauses are necessary. They include counter-examples for the cases where a clause is dropped: a Merkle tree without leaf/node separation, an unsorted revocation list, a nullifier not tied to the leaf's secret, a chain without the depth-decrement rule. Where a record's negative space says "does not establish", the model often shows why, with a concrete case the verifier accepts. Reproduce the models from the evidence repository with `sh formal/scripts/check-axioms.sh`.
+The models also show which clauses are necessary. They include counter-examples for the cases where a clause is dropped: a Merkle tree without leaf/node separation, an unsorted revocation list, a nullifier not tied to the leaf's secret, a chain without the depth-decrement rule. Where a record's negative space says "does not establish", the model often shows why, with a concrete case the verifier accepts. Reproduce the models from the evidence repository with `sh formal/scripts/check-axioms.sh`. [Formal verification review](#formal-verification-review) records each run of that check, what it found, and what remains open.
 
 ### Proving routes
 
